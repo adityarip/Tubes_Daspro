@@ -5,10 +5,10 @@
 # FUNCTION DIRECTORY
 
 # INTERNAL USE
-# _fromtext(<text>)
+# _tablefromtext(<text>)
 #   - Converts raw csv text to array.
 #   - used in loadcsv()
-# _totext(<array>)
+# _tabletotext(<array>)
 #   - Converts array to raw csv text
 #   - used in savecsv()
 # _completerow(<array>, <width>)
@@ -31,7 +31,7 @@
 
 # :: Text-array conversion
 
-def _fromtext(text: str, *, delimiter=";"):
+def _tablefromtext(text: str, *, delimiter=";"):
     # used in: loadcsv()
     # -------------------------------------------
 
@@ -59,12 +59,9 @@ def _fromtext(text: str, *, delimiter=";"):
                 line = []
 
     # Return converted array
-    if len(array) == 1:
-        return array[0]
-    else:
-        return array
+    return array
 
-def _totext(array: list, *, delimiter=";"):
+def _tabletotext(array: list, *, delimiter=";"):
     # used in: savefile()
     # -------------------------------------------
 
@@ -99,12 +96,12 @@ def _completerow(array: list, width: int):
 # :: Load from/save to file
 
 def loadcsv(file: str, *, delimiter=";", complete_rows=True):
-    # uses: _fromtext(), _completerow()
+    # uses: _tablefromtext(), _completerow()
     # -------------------------------------------
 
     with open(file, newline="\n") as f:
         raw = f.read()
-        array = _fromtext(raw, delimiter=delimiter)
+        array = _tablefromtext(raw, delimiter=delimiter)
 
     # option to fill blank entries in columns
     if complete_rows:
@@ -113,10 +110,10 @@ def loadcsv(file: str, *, delimiter=";", complete_rows=True):
     return array
 
 def savecsv(file: str, array: list, *, delimiter=";"):
-    # uses: _totext()
+    # uses: _tabletotext()
     # -------------------------------------------
 
-    with open(file, newline="\n", mode="w") as f:
+    with open(file, newline="\n", mode='w') as f:
         f.write(
-            _totext(array, delimiter=delimiter)
+            _tabletotext(array, delimiter=delimiter)
         )
