@@ -32,7 +32,7 @@ def caritahun(Gadget):
     print()
     count = 0
     if tahun > 0 and tahun <= 9999:
-        for i in range (2,len(Gadget)):
+        for i in range (1,len(Gadget)):
             if category == "=":     #jika kategori = maka sama dengan tahun input
                 if tahun == int(Gadget[i][5]):
                     out(i,Gadget)
@@ -64,4 +64,3 @@ def caritahun(Gadget):
     if count == 0:
         print("Tidak ada gadget yang ditemukan")
         print()
-
