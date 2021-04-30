@@ -64,3 +64,4 @@ def caritahun(Gadget):
     if count == 0:
         print("Tidak ada gadget yang ditemukan")
         print()
+

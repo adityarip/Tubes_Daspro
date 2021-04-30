@@ -4,9 +4,10 @@ from F03_4_carigadget import carirarity,caritahun
 from F05_06_tambahhapusitem import tambahitem,hapusitem
 from F07_ubahjumlah import ubahjumlah
 from F08_meminjamgadget import pinjam
-from F10_mintaconsumable import minta
-from F16_help import helpAdmin,helpUser
 from F09_kembalikangadget import kembalikan
+from F10_mintaconsumable import minta
+from F11_12_13_riwayat import lihatPinjam,lihatAmbil,lihatKembali
+from F16_help import helpAdmin,helpUser
 import F14_15_loadsave as tb
 import os,argparse,sys
 
@@ -25,6 +26,12 @@ def menuAdmin():    #Function pilihan menu untuk admin
         hapusitem(Gadget,Consumable)
     elif inp == "ubahjumlah":
         ubahjumlah(Gadget,Consumable)
+    elif inp == "riwayatpinjam":
+        lihatPinjam(Riwayat_pinjam,User,Gadget)
+    elif inp == "riwayatkembali":
+        lihatKembali(Riwayat_kembali,Riwayat_pinjam,User,Gadget)
+    elif inp == "riwayatambil":
+        lihatAmbil(Riwayat_ambil,User,Consumable)
     elif inp == "save":
         save_db()
     elif inp == "help":
