@@ -5,7 +5,6 @@ def register(User):
     def cek():  #mengecek apakah username unik
         for i in range(len(User)):
             if username == str(User[i][2]):
-                print("Username sudah ada\n")
                 return False
         return True
 

@@ -1,4 +1,5 @@
 id;nama;username;password;alamat;role
 A1;aditya;adit;1234;Bali;admin
-U2;user;orang;1234;Bali;user
-U3;ayam;ayam;1234;Jakarta;user
+A2;zaky;zaky;zaky;Bandung;admin
+A3;mario;mario;mario;Jakarta;admin
+A4;triska;triska;triska;Bandung;admin

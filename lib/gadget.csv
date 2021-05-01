@@ -1,3 +1,12 @@
 id;nama;deskripsi;jumlah;rarity;tahun_ditemukan
-G1;Time Machine;Mesin waktu;113;S;2009
-G2;Mouse;buat komputer;15;A;2001
+G1;Time Machine;Mesin waktu;123;S;2009
+G2;Mouse;buat komputer;0;A;2001
+G55;Laptop;komputer ergonomis;5;C;1967
+G34;Penggaris;mengukur jarak hatiku ke hatinya;17;S;1669
+G45;Bendera;buat dikibarkan di tiangnya;8;B;1945
+G30;Ban;Jadi ban cadangan;40;B;1960
+G121;Handphone;Buat nelpon selingkuhan;33;A;1456
+G77;Gelas;Menuangkan isi hatiku;89;C;1320
+G454;Headset;Mendengarkan isi hatinya;99;S;1450
+G20;Keyboard;ketik;20;B;2009
+G90;Keyboard;ngetik;45;C;2014

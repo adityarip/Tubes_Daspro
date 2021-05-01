@@ -6,7 +6,7 @@ from F07_ubahjumlah import ubahjumlah
 from F08_meminjamgadget import pinjam
 from F09_kembalikangadget import kembalikan
 from F10_mintaconsumable import minta
-from F11_12_13_riwayat import lihatPinjam,lihatAmbil,lihatKembali
+from F11_12_13_riwayat import lihatAmbil,lihatKembali,lihatPinjam
 from F16_help import helpAdmin,helpUser
 import F14_15_loadsave as tb
 import os,argparse,sys
@@ -246,7 +246,6 @@ if __name__ == "__main__":
 isloggedIn = login(User)
 while not(isloggedIn):
     isloggedIn = login(User)
-
 
 while isloggedIn[0] == "A": 
     menuAdmin()     

@@ -9,7 +9,7 @@ def pinjam(id_peminjam,Gadget,riwayat_pinjam):
                 jumlah = int(input("Masukkan jumlah: "))
                 if jumlah > 0:
                     k = int(element[3]) - jumlah
-                    if k > 0:
+                    if k >= 0:
                         element[3] = str(k)
                         print(f"Tanggal permintaan: {tanggal}")
                         print(f'Item {Gadget[i][1]} (x{jumlah}) berhasil dipinjam!')
